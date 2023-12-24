@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en-IN" dir="ltr">
+  <head>
+    <title>Do you wanna go out with me?</title>
+    <meta charset="utf-8">
+    <meta name="author" content="SidPro"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+    <meta name="description" content="Do you wanna go out with me? by Collegeek online learning platform."/>
+    <meta name="keywords" content="Do you wanna go out with me,Collegeek,Collegeek.com,learning programing,programming tutorial,tools,Live_DHTML,Convertor,microprocessor"/>
+    <link rel="stylesheet" href="./style.css">
+    <!-- icons -->
+    <link rel="apple-touch-icon" sizes="57x57" href="image/icons/favicon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="image/icons/favicon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="image/icons/favicon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="image/icons/favicon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="image/icons/favicon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="image/icons/favicon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="image/icons/favicon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="image/icons/favicon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="image/icons/favicon-180x180.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="image/icons/favicon-16x16.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="image/icons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="image/icons/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="image/icons/favicon-192x192.png">
+    <link rel="shortcut icon" type="image/x-icon" href="image/icons/favicon.ico">
+    <link rel="icon" type="image/x-icon" href="image/icons/favicon.ico">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="image/icons/favicon-144x144.png">
+    <meta name="msapplication-config" content="image/icons/browserconfig.xml">
+    <link rel="manifest" href="image/icons/manifest.json">
+    <!-- icons -->
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-3EWCZHDCG9"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-3EWCZHDCG9');
+    </script>
+  </head>
+  <body>
+        <div id="ask" class="container">
+            <div >
+                <h1 class = "header_text">Do you wanna go out with me?</h1>
+            </div>
+            <div class="gif_container">
+                <img src="image/ask.gif" alt="Cute animated illustration">
+            </div>
+            <div class = "buttons">
+                <button class="btn" id = "yesButton" onclick="nextPage()">Yes</button>
+                <button class="btn" id="noButton" onmouseover="moveButton()" onclick="moveButton()">No</button>
+            </div>
+            <video id="novideo" width="0" height="0" controls>
+                <source src="image/SadMoment.mp4" 
+                   type="video/mp4">
+            </video>
+        </div>
+        <div id="ans" class="container">
+            <div >
+                <h1 class = "header_text">Yeeeyyyy!!</h1>
+            </div>
+            <div class="gif_container">
+                <img src="image/ans.gif" alt="Cute animated illustration">
+            </div>
+            <video id="ansvideo" width="0" height="0" controls>
+                <source src="image/KidsCheering.mp4" 
+                   type="video/mp4">
+            </video>
+        </div>
+    </body> 
+    <script>
+
+        var debounce = function(fn, t = 1000) {
+            let timer;
+            return function(...args) {
+                clearTimeout(timer);
+                timer = setTimeout(() => fn(...args), t);
+            }
+        };
+
+
+        function playAudio()
+        {
+            document.getElementById('novideo').play();
+        }
+
+        function nextPage() {
+            //window.location.href = "yes.html";
+            document.getElementById('ans').style.display = 'block';
+            document.getElementById('ask').style.display = 'none';
+            document.getElementById('novideo').pause();
+            document.getElementById('ansvideo').play();
+        }
+
+        function moveButton() {
+            var x = Math.random() * (window.innerWidth - document.getElementById('noButton').offsetWidth);
+            var y = Math.random() * (window.innerHeight - document.getElementById('noButton').offsetHeight);
+            document.getElementById('noButton').style.left = `${x}px`;
+            document.getElementById('noButton').style.top = `${y}px`;
+            playAudio();
+        }
+
+    </script> 
+</html>
