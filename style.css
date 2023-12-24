@@ -73,7 +73,7 @@ body {
 }
 
 .btn:hover {
-    background-color: #FAF9F6;
+    background-color:  #ff8e9f;
 }
 
 .gif_container {
@@ -82,3 +82,15 @@ body {
     align-items: center;
     margin-left: 90px;
 }
+
+@media only screen and (max-width: 600px) {
+    .header_text{
+      margin-left: 5%;
+      margin-right: 5%;
+      word-break: break-word;
+      font-size: 30px;
+    }
+    gif_container{
+        margin-left:0;
+    }
+  }
