@@ -87,6 +87,7 @@ body {
     .header_text{
       margin-left: 5%;
       margin-right: 5%;
+      padding-left: 5%;
       word-break: break-word;
       font-size: 30px;
     }
