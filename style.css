@@ -1,7 +1,5 @@
 body {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    
     height: 90vh;
     background-color: #F8C8DC;
 }
@@ -80,18 +78,22 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-left: 90px;
+}
+
+img
+{
+    max-width: 100%;
+    height: auto;
 }
 
 @media only screen and (max-width: 600px) {
     .header_text{
-      margin-left: 5%;
-      margin-right: 5%;
-      padding-left: 10%;
-      word-break: break-word;
-      font-size: 22px;
+        color: black;
+        font-size: 40px;
     }
-    gif_container{
+    .gif_container{
         margin-left:0;
+        height: auto;
+        width: auto;
     }
   }
