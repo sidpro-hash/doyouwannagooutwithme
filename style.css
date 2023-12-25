@@ -29,9 +29,9 @@ body {
 
 .header_text {
     font-family: 'Nunito';
-    font-size: 40px;
+    font-size: 50px;
     font-weight: bold;
-    color: white;
+    color: black;
     text-align: center;
     margin-top: 20px;
     margin-bottom: 0px;
@@ -80,6 +80,14 @@ body {
     align-items: center;
 }
 
+.qrimage{
+    display: block;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 350px;
+  height: auto;
+}
+
 img
 {
     max-width: 100%;
@@ -90,6 +98,10 @@ img
     .header_text{
         color: black;
         font-size: 40px;
+    }
+    .qrimage{
+        max-width: 50%;
+        padding-left: 25%;
     }
     .gif_container{
         margin-left:0;
