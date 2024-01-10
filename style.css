@@ -1,7 +1,7 @@
 body {
     
     height: 90vh;
-    background-color: #F8C8DC;
+    background-color: #d5e3f0;
 }
 
 #ans {
@@ -90,7 +90,8 @@ body {
 
 img
 {
-    max-width: 100%;
+    margin-top: -40px;
+    max-width: 90%;
     height: auto;
     cursor: pointer;
 }
